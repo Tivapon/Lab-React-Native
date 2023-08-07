@@ -13,7 +13,7 @@ const availableZipItems = [
 
 const ZipItem = ({place, code, navigation}) => (
     <TouchableHighlight onPress={() => {
-        navigation.navigate('Weather', {zipCode: code});
+        navigation.navigate('Weather', {zipCode: code})
     }}>
         <View style = {styles.zipItem}>
             <Text>{place}</Text>
@@ -22,14 +22,12 @@ const ZipItem = ({place, code, navigation}) => (
     </TouchableHighlight>
 )
 
-const _keyExtractor = item => item.code
-
 export default function ZipCodeScreen(){
     const navigation = useNavigation()
     return (
         <FlatList 
             data = {availableZipItems}
-            keyExtractor={_keyExtractor}
+            keyExtractor={item => item.code}
             renderItem={({item}) => <ZipItem {...item}/>}
         />
     )

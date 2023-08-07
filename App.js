@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ZipCodeScreen from './components/Screen/ZipCodeScreen';
-import WeatherScreen from './components/Screen/WeatherScreen';
+import ZipCodeScreen from './Screen/ZipCodeScreen';
+import WeatherScreen from './Screen/WeatherScreen';
 
 const Stack = createStackNavigator();
 
